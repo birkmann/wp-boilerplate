@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
-	<h2>single.php</h2>
-
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-			<?php /* The loop */ ?>
+	<div class="wrapper">
+		
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
@@ -13,7 +9,6 @@
 
 			<?php endwhile; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+	</div>
 
 <?php get_footer(); ?>

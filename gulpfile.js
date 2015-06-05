@@ -40,14 +40,14 @@ gulp.task('styles-deploy', function() {
 	return gulp.src('assets/styles/scss/init.scss')
 		.pipe(sass({
 			includePaths: [
-				'assets/styles/scss/'
+				'assets/styles/'
 			]
 		}))
 		.pipe(autoprefixer({
 			browsers: autoPrefixBrowserList,
 			cascade:  true
 		}))
-		.pipe(concat('assets/styles/scss/style.css'))
+		.pipe(concat('assets/styles/style.css'))
 		.pipe(minifyCSS())
 		.pipe(gulp.dest(''));
 });
@@ -67,6 +67,10 @@ gulp.task('scripts-deploy', function() {
 		.pipe(gulp.dest('assets/scripts'));
 });
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('default', ['styles', 'scripts'], function() {
+	gulp.watch('assets/scripts/src/**', ['scripts']);
+	gulp.watch('assets/styles/scss/**', ['styles']);
+	gulp.watch('assets/images/**', ['images']);
+});
 
 gulp.task('deploy', ['styles-deploy', 'scripts-deploy']);

@@ -9,7 +9,22 @@
 
 </head>
 <body>
-<a href="/" class="logo">
-	logo
-</a>
-<?php wp_nav_menu( $args ); ?>
+
+	<header class="header-main">
+		<div class="wrapper">
+			<a href="/" class="logo">
+				wp-boilerplate
+			</a>
+
+			<?php 
+				wp_nav_menu( array( 
+					'theme_location' 	=> 'nav-main',
+					'echo'				=> true,
+					'items_wrap'      => '<nav class="nav-main"><ul id="%1$s" class="%2$s"> %3$s </ul></nav>'
+				)); 
+			?>
+
+			<?php get_search_form(); ?>
+
+		</div>
+	</header>
