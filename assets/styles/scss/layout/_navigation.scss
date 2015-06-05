@@ -1,0 +1,29 @@
+nav.nav-main {
+	ul {
+		@include clearfix;
+		li {
+			list-style: none;
+			@include breakpoint(laptop){
+				float: left;
+			}
+			a {
+				display: block;
+				padding: 5px;
+			}
+			@include breakpoint(laptop){
+				ul {
+					display: none;
+				}
+				&:hover {
+					ul {
+						display: block;
+						position: absolute;
+						li {
+							float: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

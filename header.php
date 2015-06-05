@@ -9,9 +9,10 @@
 
 </head>
 <body>
-
+<div class="page-wrapper">
 	<header class="header-main">
 		<div class="wrapper">
+
 			<a href="/" class="logo">
 				wp-boilerplate
 			</a>
@@ -25,6 +26,6 @@
 			?>
 
 			<?php get_search_form(); ?>
-
+			
 		</div>
 	</header>

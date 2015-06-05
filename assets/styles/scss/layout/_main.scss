@@ -1,12 +1,71 @@
+* {
+	box-sizing: border-box;
+	outline: 0 none;
+}
+
 body {
-	font: normal 18px/1.6em sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin: 0;
+	font: 500 normal 16px/1.6em sans-serif;
+	color: #333;
+	@include breakpoint(tablet) {
+		font-size: 17px;
+	}
+	@include breakpoint(desktop) {
+		font-size: 18px;
+	}
+	@include breakpoint(large) {
+		font-size: 19px;
+	}
+	@include breakpoint(larger) {
+		font-size: 20px;
+	}
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+}
+
+:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #666;
+}
+
+h2 {
 	color: #333;
 }
 
-.wrapper {
-	max-width: 800px;
+a {
+	color: #4472B9;
+	text-decoration: none;
+	&:hover {
+		color: #000;
+	}
+}
+
+.page-wrapper {
+	max-width: 1140px;
+	overflow: hidden;
 	margin: 0 auto;
-	padding: 0 15px;
+	position: relative;
+}
+
+.wrapper {
+	max-width: 1140px;
+	margin: 0 auto;
 }
 
 .row {
@@ -30,7 +89,7 @@ body {
 
 header.header-main {
 	padding: 25px 0;
-	margin: 0 0 15px 0;
+	margin: 0 0 50px 0;
 	a {
 		text-decoration: none;
 	}
@@ -39,11 +98,28 @@ header.header-main {
 		font-weight: bold;
 		color: #333;
 	}
+	nav.nav-main {
+		@include breakpoint(laptop) {
+			width: 80%;
+			float: left;
+		}
+	}
+	form.form-search {
+		@include breakpoint(laptop) {
+			width: 20%;
+			float: right;
+		}
+		input {
+			width: 100%;
+			padding: 8px 10px;
+			font-size: inherit;
+		}
+	}
 }
 
 footer.footer-main {
-	padding: 15px 0;
-	margin: 15px 0 0 0;
-	font-size: 0.9em;
-	color: #aaa;
+	position: relative;
+	color: #999;
+	font-size: 0.95rem;
+	margin: 50px 0 0 0;
 }
