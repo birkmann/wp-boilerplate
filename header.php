@@ -26,6 +26,10 @@
 			?>
 
 			<?php get_search_form(); ?>
+
+			<?php if ( is_active_sidebar( 'widget-header' ) ) : ?>
+				<?php dynamic_sidebar( 'widget-header' ); ?>
+			<?php endif; ?>
 			
 		</div>
 	</header>
