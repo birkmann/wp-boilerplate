@@ -1,4 +1,6 @@
 nav.nav-main {
+	position: relative;
+	z-index: 5;
 	ul {
 		@include clearfix;
 		li {
