@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/assets/styles/styles.css" />  
-
+	<?php wp_head(); ?>
 </head>
 <body>
 <div class="page-wrapper">
@@ -30,6 +30,11 @@
 			<?php if ( is_active_sidebar( 'widget-header' ) ) : ?>
 				<?php dynamic_sidebar( 'widget-header' ); ?>
 			<?php endif; ?>
-			
+
+			1:
+			<?php get_custom_header(); ?>
+			2:
+			<?php get_header_image(); ?>
+
 		</div>
 	</header>

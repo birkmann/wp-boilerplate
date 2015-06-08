@@ -6,6 +6,7 @@
 		</div>
 	</footer>
 </div> <!-- .page-wrapper -->
+<?php wp_footer(); ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>if (!window.jQuery) { document.write('<script src="<?php bloginfo('template_directory'); ?>/assets/scripts/jquery.js"><\/script>'); }
 </script>

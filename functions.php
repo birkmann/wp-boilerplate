@@ -22,11 +22,20 @@
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'title-tag' );
 
-	set_post_thumbnail_size( 1140, 600, true );
+	$argsCustomHeader = array(
+		'flex-height'            => false,
+		'height'                 => 800,
+		'flex-width'             => false,
+		'width'                  => 1140,
+		'default-image'          => get_template_directory_uri() . '/assets/images/custom-header.jpg',
+		'random-default'         => false,
+		'header-text'            => false,
+		'uploads'                => true
+	);
+ 
+	add_theme_support( 'custom-header', $argsCustomHeader );
 
-	add_theme_support( 'custom-background', apply_filters( 'twentyfourteen_custom_background_args', array(
-		'default-color' => 'f5f5f5',
-	) ) );
+	set_post_thumbnail_size( 1140, 600, true );
 
 	function wp_boilerplate_widgets_init() {
 
