@@ -1,5 +1,8 @@
 <?php
 
+	define( 'TEMPLATE_PARENT_DIR', get_template_directory() );
+	define( 'TEMPLATE_INCLUDES_DIR', TEMPLATE_PARENT_DIR. '/inc' );
+
 	function register_my_menus() {
 		register_nav_menus(
 			array(

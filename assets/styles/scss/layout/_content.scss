@@ -1,4 +1,4 @@
+.header-image,
 .attachment-post-thumbnail.wp-post-image {
-	width: 100%;
-	height: auto;
+	@extend .r-img;
 }

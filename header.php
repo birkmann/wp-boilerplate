@@ -31,10 +31,5 @@
 				<?php dynamic_sidebar( 'widget-header' ); ?>
 			<?php endif; ?>
 
-			1:
-			<?php get_custom_header(); ?>
-			2:
-			<?php get_header_image(); ?>
-
 		</div>
 	</header>

@@ -15,7 +15,10 @@ $susy: (
 
 //global things
 @import 'general/_reset';
+
+@import 'plugins/_owl-carousel';
+
 @import 'layout/_navigation';
-@import 'layout/_content';
 @import 'layout/_main';
+@import 'layout/_content';
 //pages
