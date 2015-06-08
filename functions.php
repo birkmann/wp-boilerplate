@@ -19,11 +19,17 @@
 		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
 	) );
 
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'title-tag' );
+
+	set_post_thumbnail_size( 1140, 600, true );
+
 	add_theme_support( 'custom-background', apply_filters( 'twentyfourteen_custom_background_args', array(
 		'default-color' => 'f5f5f5',
 	) ) );
 
 	function wp_boilerplate_widgets_init() {
+
 		register_sidebar( array(
 			'name'          => __( 'Custom Widget Area Header', 'wp-boilerplate' ),
 			'id'            => 'widget-header',
@@ -33,6 +39,17 @@
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Custom Widget Area Footer', 'wp-boilerplate' ),
+			'id'            => 'widget-footer',
+			'description'   => __( 'Custom widget area for the footer of my theme', 'wp-boilerplate' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+
 	}
 
 	add_action( 'widgets_init', 'wp_boilerplate_widgets_init' );
