@@ -1,14 +1,14 @@
 nav.nav-main {
 	position: relative;
 	z-index: 5;
+	display: none;
+	@include breakpoint(laptop){
+		display: block;
+	}
 	ul {
 		@include clearfix;
-		display: none;
 		margin: 0;
 		padding: 0;
-		@include breakpoint(laptop){
-			display: block;
-		}
 		li {
 			list-style: none;
 			@include breakpoint(laptop){
@@ -22,7 +22,7 @@ nav.nav-main {
 					color: #333;
 				}
 				@include breakpoint(laptop){
-					line-height: 100px;
+					line-height: 75px;
 					padding: 0 25px;
 				}
 			}
@@ -46,6 +46,7 @@ nav.nav-main {
 						position: absolute;
 						background: #fff;
 						min-width: 150px;
+						border: 1px solid #eee;
 						li {
 							float: none;
 							a {

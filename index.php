@@ -20,10 +20,9 @@
 							<?php the_post_thumbnail(); ?>
 						</span>
 						<span class="text-box">
-							<span class="wrapper">
-								<h3><?php the_title(); ?></h3>
-								<?php the_excerpt(); ?>
-							</span>
+							<span class="wrapper"></span>
+							<h3><?php the_title(); ?></h3>
+							<?php the_excerpt(); ?>
 						</span>
 					</a>
 				</div>     

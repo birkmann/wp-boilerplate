@@ -113,6 +113,7 @@ a {
 }
 
 header.header-main {
+	border-bottom: 1px solid #eee;
 	@include clearfix;
 	a {
 		text-decoration: none;
@@ -122,28 +123,60 @@ header.header-main {
 		font-weight: bold;
 		letter-spacing: -2px;
 		color: #333;
+		border-right: 1px solid #eee;
+		padding-right: 15px;
+		float: left;
+		line-height: 60px;
 		&:hover {
 			color: #000;
 		}
 		@include breakpoint(laptop) {
-			float: left;
-			line-height: 100px;
+			line-height: 75px;
 		}
 	}
 	.menu-wrapper {
 		@include breakpoint(laptop) {
-			float: right;
+			float: left;
+		}
+	}
+	.search-toggle {
+		position: relative;
+		z-index: 10;
+		cursor: pointer;
+		float: right;
+		color: #888;
+		line-height: 60px;
+		&:hover {
+			color: #666;
+		}
+		@include breakpoint(laptop) {
+			line-height: 75px;
 		}
 	}
 	.search-wrapper {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #333;
+		height: 62px;
+		z-index: 6;
+		width: 100%;
 		@include breakpoint(laptop) {
-			display: none;
-			width: 100%;
+			height: 77px;
 		}
 		form.form-search {
 			input {
-				padding: 8px 10px;
+				width: 90%;
+				padding: 10px 10px;
 				font-size: inherit;
+				border: 0 none;
+				margin: 12px 0;
+				border-radius: 3px;
+				@include breakpoint(laptop) {
+					margin: 17px 0;
+					width: 95%;
+				}
 			}
 		}
 	}

@@ -19,6 +19,7 @@
 			         <div class="slide">
 						<a href="<?php the_permalink(); ?>">
 							<span class="img-wrapper">
+								<span class="blank"></span>
 								<?php the_post_thumbnail(); ?>
 							</span>
 							<span class="text-box">

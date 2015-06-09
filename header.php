@@ -30,10 +30,12 @@
 					wp_nav_menu( array( 
 						'theme_location' 	=> 'nav-main',
 						'echo'				=> true,
-						'items_wrap'      => '<nav class="nav-main"><ul id="%1$s" class="%2$s"> %3$s <li><span class="search-toggle glyph-icon flaticon-magnifying-glass32"></span></li></ul></nav>'
+						'items_wrap'      => '<nav class="nav-main"><ul id="%1$s" class="%2$s"> <span class="menu-items">%3$s</span></ul></nav>'
 					)); 
 				?>
 			</div>
+
+			<span class="search-toggle glyph-icon flaticon-magnifying-glass32"></span>
 
 			<?php if ( is_active_sidebar( 'widget-header' ) ) : ?>
 				<?php dynamic_sidebar( 'widget-header' ); ?>
