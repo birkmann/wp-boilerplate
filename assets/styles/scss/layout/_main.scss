@@ -3,29 +3,6 @@
 	outline: 0 none;
 }
 
-body {
-	-webkit-text-size-adjust: 100%;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	margin: 0;
-	font: 500 normal 14px/1.6em sans-serif;
-	color: #333;
-	@include breakpoint(tablet) {
-		font-size: 15px;
-	}
-	@include breakpoint(desktop) {
-		font-size: 16px;
-	}
-	@include breakpoint(large) {
-		font-size: 17px;
-	}
-	@include breakpoint(larger) {
-		font-size: 18px;
-	}
-}
-
 ::-webkit-input-placeholder {
 	color: #666;
 }
@@ -44,6 +21,46 @@ body {
 	color: #666;
 }
 
+.primary-font {
+	font-family: "PT Serif", serif;
+}
+
+.secondary-font {
+	font-family: "Montserrat", sans-serif;
+}
+
+body {
+	@extend .secondary-font;
+	line-height: 1.6em;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin: 0;
+	color: #333;
+	@include breakpoint(tablet) {
+		font-size: 15px;
+	}
+	@include breakpoint(desktop) {
+		font-size: 16px;
+	}
+	@include breakpoint(large) {
+		font-size: 17px;
+	}
+	@include breakpoint(larger) {
+		font-size: 18px;
+	}
+}
+
+p {
+	font-family: "PT Serif", serif;
+	color: #737C7F;
+	strong {
+		color: #333;
+	}
+}
+
 h2 {
 	color: #333;
 }
@@ -53,13 +70,6 @@ a {
 	text-decoration: none;
 	&:hover {
 		color: #000;
-	}
-}
-
-p {
-	color: #737C7F;
-	strong {
-		color: #333;
 	}
 }
 
@@ -73,6 +83,8 @@ p {
 .wrapper {
 	max-width: 1140px;
 	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
 }
 
 .row {
@@ -106,11 +118,12 @@ header.header-main {
 		text-decoration: none;
 	}
 	.logo {
-		font-size: 1.5em;
+		font-size: 2em;
 		font-weight: bold;
-		color: #bbb;
+		letter-spacing: -2px;
+		color: #333;
 		&:hover {
-			color: #aaa;
+			color: #000;
 		}
 		@include breakpoint(laptop) {
 			float: left;
@@ -122,11 +135,16 @@ header.header-main {
 			float: right;
 		}
 	}
-	form.form-search {
-		display: none;
-		input {
-			padding: 8px 10px;
-			font-size: inherit;
+	.search-wrapper {
+		@include breakpoint(laptop) {
+			display: none;
+			width: 100%;
+		}
+		form.form-search {
+			input {
+				padding: 8px 10px;
+				font-size: inherit;
+			}
 		}
 	}
 }

@@ -3,8 +3,12 @@ nav.nav-main {
 	z-index: 5;
 	ul {
 		@include clearfix;
+		display: none;
 		margin: 0;
 		padding: 0;
+		@include breakpoint(laptop){
+			display: block;
+		}
 		li {
 			list-style: none;
 			@include breakpoint(laptop){
@@ -20,6 +24,16 @@ nav.nav-main {
 				@include breakpoint(laptop){
 					line-height: 100px;
 					padding: 0 25px;
+				}
+			}
+			span {
+				color: #888;
+				cursor: pointer;
+				&:hover {
+					color: #333;
+				}
+				@include breakpoint(laptop){
+					line-height: 100px;
 				}
 			}
 			@include breakpoint(laptop){

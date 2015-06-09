@@ -12,6 +12,8 @@
 
 $(document).ready(function(){
 
+	$('.emotion img').vAlign();
+
 	$('.emotion .owl-carousel').owlCarousel({
 		autoPlay: 3000,
 		loop: true,
@@ -30,7 +32,9 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.emotion img').vAlign();
+	$(".search-toggle").click(function(){
+		$(".search-wrapper").toggle();
+	});
 
 });
 

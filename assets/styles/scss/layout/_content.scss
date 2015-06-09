@@ -8,10 +8,16 @@
 		position: relative;
 		a {
 			text-decoration: none;
-			color: #fff;
+			color: #333;
+			@include breakpoint(tablet){
+				color: #fff;
+			}
 			&:hover {
 				text-decoration: none;
-				color: #fff;
+				color: #000;
+				@include breakpoint(tablet){
+					color: #fff;
+				}
 			}
 		}
 		.img-wrapper {
@@ -19,12 +25,17 @@
 			overflow: hidden;
 		}
 		.text-box {
-			background: rgba(0,0,0,0.5);
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			padding: 15px;
 			width: 100%;
+			position: relative;
+			display: block;
+			@include breakpoint(tablet){
+				background: rgba(0,0,0,0.5);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				padding: 15px 0;
+				width: 100%;
+			}
 			h3 {
 				font-size: 1.25em;
 				font-weight: bold;
