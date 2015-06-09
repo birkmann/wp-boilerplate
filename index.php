@@ -1,30 +1,44 @@
 <?php get_header(); ?>
 
-	<div class="emotion">
+<div class="emotion">
 
-		<div class="owl-carousel">
-		
-			<?php
+	<div class="owl-carousel">
 
-				$post_query = new WP_Query ( 'post_type' , 'post'  );
+		<?php
 
-				if($post_query->have_posts() ) : while($post_query->have_posts() ) : $post_query->the_post(); ?>
+		   $args = array('cat' => 5);
+		   $category_posts = new WP_Query($args);
 
-					<div class="slide">
-						<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail(); ?>
+		   if($category_posts->have_posts()) : 
+		      while($category_posts->have_posts()) : 
+		         $category_posts->the_post();
+		?>
+
+		         <div class="slide">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail(); ?>
+						<span class="text-box">
 							<h3><?php the_title(); ?></h3>
 							<?php the_excerpt(); ?>
-						</a>
-					</div>
-			
-					<?php endwhile; ?>
+						</span>
+					</a>
+				</div>     
+		      
+		<?php
+		      endwhile;
+		   else: 
+		?>
 
-				<?php endif; ?>
+		      There are no posts.
 
-		</div>
+		<?php
+		   endif;
+		?>
 
 	</div>
+
+</div>
+
 
 	<div class="wrapper">
 
