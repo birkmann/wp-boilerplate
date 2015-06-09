@@ -16,10 +16,14 @@
 
 		         <div class="slide">
 					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail(); ?>
+						<span class="img-wrapper">
+							<?php the_post_thumbnail(); ?>
+						</span>
 						<span class="text-box">
-							<h3><?php the_title(); ?></h3>
-							<?php the_excerpt(); ?>
+							<span class="wrapper">
+								<h3><?php the_title(); ?></h3>
+								<?php the_excerpt(); ?>
+							</span>
 						</span>
 					</a>
 				</div>     

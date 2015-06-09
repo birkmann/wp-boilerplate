@@ -14,6 +14,10 @@
 				color: #fff;
 			}
 		}
+		.img-wrapper {
+			display: block;
+			overflow: hidden;
+		}
 		.text-box {
 			background: rgba(0,0,0,0.5);
 			position: absolute;
@@ -24,9 +28,12 @@
 			h3 {
 				font-size: 1.25em;
 				font-weight: bold;
+				margin: 0 0 5px;
 			}
 			p {
 				display: none;
+				margin: 0;
+				color: #fff;
 				@include breakpoint(tablet){
 					display: block;
 				}

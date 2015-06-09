@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="page-wrapper">
+
 	<header class="header-main">
 		<div class="wrapper">
 
@@ -17,13 +18,15 @@
 				wp-boilerplate
 			</a>
 
-			<?php 
-				wp_nav_menu( array( 
-					'theme_location' 	=> 'nav-main',
-					'echo'				=> true,
-					'items_wrap'      => '<nav class="nav-main"><ul id="%1$s" class="%2$s"> %3$s </ul></nav>'
-				)); 
-			?>
+			<div class="menu-wrapper">
+				<?php 
+					wp_nav_menu( array( 
+						'theme_location' 	=> 'nav-main',
+						'echo'				=> true,
+						'items_wrap'      => '<nav class="nav-main"><ul id="%1$s" class="%2$s"> %3$s </ul></nav>'
+					)); 
+				?>
+			</div>
 
 			<?php get_search_form(); ?>
 

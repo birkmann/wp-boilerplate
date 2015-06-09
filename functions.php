@@ -38,7 +38,7 @@
  
 	add_theme_support( 'custom-header', $argsCustomHeader );
 
-	set_post_thumbnail_size( 1140, 600, true );
+	set_post_thumbnail_size( 1600, 600, true );
 
 	function wp_boilerplate_widgets_init() {
 

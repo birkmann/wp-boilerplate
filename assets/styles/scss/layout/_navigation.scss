@@ -3,6 +3,8 @@ nav.nav-main {
 	z-index: 5;
 	ul {
 		@include clearfix;
+		margin: 0;
+		padding: 0;
 		li {
 			list-style: none;
 			@include breakpoint(laptop){
@@ -11,6 +13,14 @@ nav.nav-main {
 			a {
 				display: block;
 				padding: 5px;
+				color: #888;
+				&:hover {
+					color: #333;
+				}
+				@include breakpoint(laptop){
+					line-height: 100px;
+					padding: 0 25px;
+				}
 			}
 			@include breakpoint(laptop){
 				ul {
@@ -20,8 +30,17 @@ nav.nav-main {
 					ul {
 						display: block;
 						position: absolute;
+						background: #fff;
+						min-width: 150px;
 						li {
 							float: none;
+							a {
+								line-height: 1.6em;
+								padding: 10px 25px;
+								&:hover {
+									
+								}
+							}
 						}
 					}
 				}

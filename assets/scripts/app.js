@@ -1,3 +1,15 @@
+(function ($) {
+	// VERTICALLY ALIGN FUNCTION
+	$.fn.vAlign = function() {
+		return this.each(function(i){
+		var ah = $(this).height();
+		var ph = $(this).parent().height();
+		var mh = Math.ceil((ph-ah) / 2);
+		$(this).css('margin-top', mh);
+		});
+	};
+})(jQuery);
+
 $(document).ready(function(){
 
 	$('.emotion .owl-carousel').owlCarousel({
@@ -18,6 +30,12 @@ $(document).ready(function(){
 		}
 	});
 
+	$('.emotion img').vAlign();
+
+});
+
+$(window).resize(function() {
+	$('.emotion img').vAlign();
 });
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
