@@ -34,6 +34,12 @@ $(document).ready(function(){
 
 	$(".search-toggle").click(function(){
 		$(".search-wrapper").toggle();
+		$(".search-toggle.close").toggle();
+		$(".search-toggle.open").toggle();
+	});
+
+	$(".menu-toggle").click(function(){
+		$(".nav-main").toggle();
 	});
 
 });

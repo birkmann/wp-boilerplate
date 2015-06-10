@@ -35,7 +35,9 @@
 				?>
 			</div>
 
-			<span class="search-toggle glyph-icon flaticon-magnifying-glass32"></span>
+			<span class="search-toggle open glyph-icon flaticon-magnifying-glass32"></span>
+			<span class="search-toggle close glyph-icon flaticon-close47"></span>
+			<span class="menu-toggle glyph-icon flaticon-menu55"></span>
 
 			<?php if ( is_active_sidebar( 'widget-header' ) ) : ?>
 				<?php dynamic_sidebar( 'widget-header' ); ?>

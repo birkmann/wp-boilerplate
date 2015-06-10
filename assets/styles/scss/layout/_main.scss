@@ -123,7 +123,6 @@ header.header-main {
 		font-weight: bold;
 		letter-spacing: -2px;
 		color: #333;
-		border-right: 1px solid #eee;
 		padding-right: 15px;
 		float: left;
 		line-height: 60px;
@@ -132,6 +131,7 @@ header.header-main {
 		}
 		@include breakpoint(laptop) {
 			line-height: 75px;
+			border-right: 1px solid #eee;
 		}
 	}
 	.menu-wrapper {
@@ -139,7 +139,10 @@ header.header-main {
 			float: left;
 		}
 	}
-	.search-toggle {
+	.glyph-icon {
+		border-left: 1px solid #eee;
+		padding: 0 20px;
+		font-size: 1.25em;
 		position: relative;
 		z-index: 10;
 		cursor: pointer;
@@ -149,33 +152,47 @@ header.header-main {
 		&:hover {
 			color: #666;
 		}
+		&.close {
+			display: none;
+		}
 		@include breakpoint(laptop) {
 			line-height: 75px;
+		}
+	}
+	.search-toggle {
+		padding: 0 10px 0 20px;
+		@include breakpoint(laptop) {
+			border: 0 none;
+		}
+	}
+	.menu-toggle {
+		font-size: 1.5em;
+		@include breakpoint(laptop) {
+			display: none;
 		}
 	}
 	.search-wrapper {
 		display: none;
 		position: absolute;
-		top: 0;
+		top: 62px;
 		left: 0;
-		background: #333;
+		background: #fff;
 		height: 62px;
 		z-index: 6;
 		width: 100%;
 		@include breakpoint(laptop) {
 			height: 77px;
+			top: 76px;
 		}
 		form.form-search {
 			input {
-				width: 90%;
-				padding: 10px 10px;
+				width: 100%;
+				padding: 10px 12px;
 				font-size: inherit;
-				border: 0 none;
+				border: 1px solid #eee;
 				margin: 12px 0;
-				border-radius: 3px;
 				@include breakpoint(laptop) {
 					margin: 17px 0;
-					width: 95%;
 				}
 			}
 		}
