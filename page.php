@@ -62,7 +62,7 @@
 
 					   $args = array(
 					   		'cat' => 6,
-					   		'showposts' => 4
+					   		'showposts' => 3
 					   	);
 					   $category_posts = new WP_Query($args);
 
@@ -115,7 +115,6 @@
 		</main>
 
 		<aside class="sidebar">
-			<h3>Sidebar</h3>
 			<?php if ( is_active_sidebar( 'widget-sidebar' ) ) : ?>
 				<?php dynamic_sidebar( 'widget-sidebar' ); ?>
 			<?php endif; ?>	

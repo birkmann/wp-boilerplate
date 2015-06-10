@@ -62,7 +62,7 @@
 
 		register_sidebar( array(
 			'name'          => __( 'Custom Widget Area Sidebar', 'wp-boilerplate' ),
-			'id'            => 'widget-header',
+			'id'            => 'widget-sidebar',
 			'description'   => __( 'Custom widget area for the sidebar of my theme', 'wp-boilerplate' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',

@@ -40,17 +40,18 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 	color: #666;
+	font-size: 15px;
 	@include breakpoint(tablet) {
 		font-size: 15px;
 	}
 	@include breakpoint(desktop) {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	@include breakpoint(large) {
-		font-size: 17px;
+		font-size: 16px;
 	}
 	@include breakpoint(larger) {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 
@@ -227,7 +228,6 @@ header.header-main {
 
 footer.footer-main {
 	position: relative;
-	font-size: 0.95rem;
 	margin: 25px 0 0 0;
 	.col {
 		@include breakpoint(touchonly){

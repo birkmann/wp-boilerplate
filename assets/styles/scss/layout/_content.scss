@@ -64,3 +64,19 @@
 		}
 	}
 }
+
+.sidebar {
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			a {
+				color: #888;
+				&:hover {
+					color: #333;
+				}
+			}
+		}
+	}
+}
