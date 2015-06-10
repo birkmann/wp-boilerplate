@@ -8,7 +8,7 @@
 $susy: (
 	columns: 12,
 	container: 1140px,
-	gutters: 0.25,
+	gutters: 1,
 	global-box-sizing: border-box,
 	debug: (image: show-columns)
 );
@@ -23,4 +23,5 @@ $susy: (
 @import 'layout/_navigation';
 @import 'layout/_main';
 @import 'layout/_content';
+@import 'layout/_article';
 //pages

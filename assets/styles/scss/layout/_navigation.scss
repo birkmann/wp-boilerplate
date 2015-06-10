@@ -24,6 +24,7 @@ nav.nav-main {
 				float: left;
 			}
 			a {
+				@extend .secondary-font;
 				display: block;
 				padding: 5px 15px;
 				color: #888;

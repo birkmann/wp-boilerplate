@@ -22,7 +22,7 @@
 }
 
 .primary-font {
-	font-family: "PT Serif", serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 .secondary-font {
@@ -30,15 +30,16 @@
 }
 
 body {
-	@extend .secondary-font;
-	line-height: 1.6em;
+	@extend .primary-font;
 	-webkit-text-size-adjust: 100%;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	line-height: 1.6em;
+	font-weight: 400;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0;
-	color: #333;
+	color: #666;
 	@include breakpoint(tablet) {
 		font-size: 15px;
 	}
@@ -53,15 +54,9 @@ body {
 	}
 }
 
-p {
-	font-family: "PT Serif", serif;
-	color: #737C7F;
-	strong {
-		color: #333;
-	}
-}
-
-h2 {
+h1,
+h2,
+h3 {
 	color: #333;
 }
 
@@ -119,6 +114,7 @@ header.header-main {
 		text-decoration: none;
 	}
 	.logo {
+		@extend .secondary-font;
 		font-size: 2em;
 		font-weight: bold;
 		letter-spacing: -2px;
@@ -182,7 +178,7 @@ header.header-main {
 		width: 100%;
 		@include breakpoint(laptop) {
 			height: 77px;
-			top: 76px;
+			top: 77px;
 		}
 		form.form-search {
 			input {
@@ -205,12 +201,81 @@ header.header-main {
 	}
 	.img-wrapper {
 		max-height: 600px;
+		overflow: hidden;
+		img {
+			transition: all 0.1s;
+		}
+	}
+}
+
+.content-wrapper {
+	@include clearfix;
+	&.has-sidebar {
+		.content {
+			@include breakpoint(laptop) {
+				@include span(8);
+			}
+		}
+
+		.sidebar {
+			@include breakpoint(laptop) {
+				@include span(4 last);
+			}
+		}
 	}
 }
 
 footer.footer-main {
 	position: relative;
-	color: #999;
 	font-size: 0.95rem;
-	margin: 50px 0 0 0;
+	margin: 25px 0 0 0;
+	.col {
+		@include breakpoint(touchonly){
+			margin-bottom: 50px;
+		}
+		@include breakpoint(laptop) {
+			@include span(4);
+			&:last-child {
+				@include span(4 last);
+			}
+		}
+		h3 {
+			margin: 0 0 15px;
+			padding: 0 0 10px;
+			text-transform: uppercase;
+			border-bottom: 1px solid #ddd;
+		}
+		p {
+			margin-top: 0;
+		}
+		form {
+			input,
+			textarea,
+			button {
+				font-size: inherit;
+				width: 100%;
+				padding: 10px;
+				margin: 0 0 10px;
+				border: 1px solid #ddd;
+			}
+			textarea {
+				min-height: 150px;
+			}
+			button {
+				background: #202020;
+				color: #fff;
+				border: 0 none;
+				cursor: pointer;
+				font-weight: bold;
+				text-transform: uppercase;
+				&:hover {
+					background: #000;
+				}
+			}
+		}
+	}
+	.bottom {
+		padding: 25px 0;
+		color: #aaa;
+	}
 }

@@ -1,0 +1,35 @@
+article.feature {
+	@include clearfix;
+	border: 1px solid #eee;
+	margin: 0 0 25px;
+	.block-side {
+		@include breakpoint(tablet){
+			width: 40%;
+			float: left;
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	.block-text {
+		display: block;
+		padding: 15px;
+		@include breakpoint(tablet){
+			width: 60%;
+			float: left;
+		}
+		a {
+			color: #333;
+		}
+		h3 {
+			line-height: 1.2em;
+			margin: 0 0 10px;
+		}
+		p {
+			margin: 0;
+			color: #666;
+		}
+	}
+}

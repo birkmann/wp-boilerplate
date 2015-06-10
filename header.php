@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300,800' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/assets/styles/styles.css" />  
 	<?php wp_head(); ?>
 </head>
