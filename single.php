@@ -6,10 +6,11 @@
 		</div>
 	</div>
 
+<div class="content-wrapper has-sidebar">
 
-	<main class="content">
+	<div class="wrapper">
 
-		<div class="wrapper">
+		<main class="content">
 			
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article class="single">
@@ -21,8 +22,19 @@
 				</article>
 			<?php endwhile; ?>
 			
-		</div>
 		
-	</main>
+		</main>
+
+		<aside class="sidebar">
+			<?php if ( is_active_sidebar( 'widget-sidebar' ) ) : ?>
+				<?php dynamic_sidebar( 'widget-sidebar' ); ?>
+			<?php endif; ?>	
+		</aside>
+
+	</div>	
+
+
+</div>
+
 
 <?php get_footer(); ?>

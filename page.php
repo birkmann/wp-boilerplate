@@ -49,7 +49,6 @@
 
 <div class="content-wrapper has-sidebar">
 
-
 	<div class="wrapper">
 
 		<main class="content">

@@ -81,6 +81,7 @@ a {
 	margin: 0 auto;
 	padding: 0 15px;
 	position: relative;
+	@include clearfix;
 }
 
 .row {
@@ -211,6 +212,7 @@ header.header-main {
 
 .content-wrapper {
 	@include clearfix;
+	padding: 15px 0;
 	&.has-sidebar {
 		.content {
 			@include breakpoint(laptop) {
