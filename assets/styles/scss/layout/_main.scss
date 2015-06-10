@@ -171,15 +171,15 @@ header.header-main {
 	.search-wrapper {
 		display: none;
 		position: absolute;
-		top: 62px;
+		top: 61px;
 		left: 0;
 		background: #fff;
-		height: 62px;
+		height: 61px;
 		z-index: 6;
 		width: 100%;
 		@include breakpoint(laptop) {
 			height: 77px;
-			top: 77px;
+			top: 76px;
 		}
 		form.form-search {
 			input {
