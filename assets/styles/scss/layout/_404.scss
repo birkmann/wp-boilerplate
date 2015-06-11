@@ -1,11 +1,12 @@
 .wrapper-404 {
 	background: url("../images/404-bg-small.png") no-repeat;
-	background-position: center center;
 	padding: 150px 0;
 	text-align: center;
 	@include breakpoint(tablet){
 		padding: 300px 0;
 		background: url("../images/404-bg.png") no-repeat;
+	}
+	@include breakpoint(mobileonly){
 		background-position: center center;
 	}
 	h2 {
