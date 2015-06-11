@@ -80,3 +80,54 @@
 		}
 	}
 }
+
+.comments-area {
+	.comment-respond {
+		h3.comment-reply-title {
+
+		}
+		form.comment-form {
+			p.logged-in-as {
+				a {
+
+				}
+			}
+			p.comment-form-comment {
+				label {
+					margin: 10px 0;;
+					text-transform: uppercase;
+					font-weight: bold;
+					color: #333;
+					display: block;
+				}
+				textarea {
+					font-size: inherit;
+					line-height: inherit;
+					width: 100%;
+					padding: 10px;
+					margin: 0 0 10px;
+					border: 1px solid #ddd;
+				}
+			}
+			p.form-allowed-tags {
+				border: 1px solid #ddd;
+				padding: 15px;
+				font-size: 0.9em;
+				line-height: 1.5em;
+				abbr {
+					color: #333;
+					font-weight: bold;
+				}
+				code {
+					color: #333;
+				}
+			}
+			p.form-submit {
+				input[type="submit"] {
+					@extend .button;
+					font-size: inherit;
+				}
+			}
+		}
+	}
+}

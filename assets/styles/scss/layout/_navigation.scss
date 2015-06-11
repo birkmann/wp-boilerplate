@@ -2,7 +2,7 @@ nav.nav-main {
 	position: relative;
 	z-index: 5;
 	display: none;
-	@include breakpoint(mobileonly){
+	@include breakpoint(touchonly){
 		position: absolute;
 		top: 61px;
 		left: 0;
@@ -46,7 +46,7 @@ nav.nav-main {
 					line-height: 100px;
 				}
 			}
-			@include breakpoint(mobileonly){
+			@include breakpoint(touchonly){
 				ul {
 					display: block;
 					padding-left: 15px;

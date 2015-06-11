@@ -23,6 +23,6 @@
 		@media (max-width: 50em)  { @content; }
 	}
 	@else if $point == touchonly {
-		@media (max-width: 70em)  { @content; }
+		@media (max-width: 64em)  { @content; }
 	}
 }
