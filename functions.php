@@ -194,31 +194,31 @@
 			'not_found_in_trash' => '',
 		);
 
-	$rewrite = array(
-		'slug' => 'portfolio',
-		'with_front' => true,
-		'pages' => true,
-		'feeds' => true,
-	);
+		$rewrite = array(
+			'slug' => 'portfolio',
+			'with_front' => true,
+			'pages' => true,
+			'feeds' => true,
+		);
 
-	$args = array(
-		'labels' => $labels,
-		'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'trackbacks', ),
-		'taxonomies' => array( 'category', 'post_tag' ),
-		'hierarchical' => false,
-		'public' => true,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'show_in_nav_menus' => true,
-		'show_in_admin_bar' => true,
-		'menu_position' => 5,
-		'can_export' => false,
-		'has_archive' => true,
-		'exclude_from_search' => false,
-		'publicly_queryable' => true,
-		'rewrite' => $rewrite,
-		'capability_type' => 'page',
-	);
+		$args = array(
+			'labels' => $labels,
+			'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'trackbacks', ),
+			'taxonomies' => array( 'category', 'post_tag' ),
+			'hierarchical' => false,
+			'public' => true,
+			'show_ui' => true,
+			'show_in_menu' => true,
+			'show_in_nav_menus' => true,
+			'show_in_admin_bar' => true,
+			'menu_position' => 5,
+			'can_export' => false,
+			'has_archive' => true,
+			'exclude_from_search' => false,
+			'publicly_queryable' => true,
+			'rewrite' => $rewrite,
+			'capability_type' => 'page',
+		);
 
 	register_post_type( 'portfolio', $args );
 	 
