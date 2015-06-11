@@ -2,8 +2,10 @@
 
 	<div class="wrapper">
 
-		<p>404-Error:</p>
-		<?php get_search_form(); ?>
+		<div class="wrapper-404">
+			<h2>We couldn't find what you're looking for.</h2>
+			<a href="/" class="button">Explore</a>
+		</div>
 
 	</div>
 

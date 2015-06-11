@@ -69,6 +69,21 @@ a {
 	}
 }
 
+.button {
+	display: inline-block;
+	background: #000;
+	border: 2px solid #000;
+	color: #fff;
+	padding: 8px 25px;
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: uppercase;
+	&:hover {
+		background: none;
+		color: #000;
+	}
+}
+
 .page-wrapper {
 	max-width: 100%;
 	overflow: hidden;
@@ -265,15 +280,7 @@ footer.footer-main {
 				min-height: 150px;
 			}
 			button {
-				background: #202020;
-				color: #fff;
-				border: 0 none;
-				cursor: pointer;
-				font-weight: bold;
-				text-transform: uppercase;
-				&:hover {
-					background: #000;
-				}
+				@extend .button;
 			}
 		}
 	}

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/assets/styles/styles.css" />  
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class( $class ); ?>> 
 <div class="page-wrapper">
 
 	<header class="header-main">

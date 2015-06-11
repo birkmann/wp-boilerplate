@@ -18,12 +18,6 @@
 					<?php if ( is_active_sidebar( 'widget-footer-right' ) ) : ?>
 						<?php dynamic_sidebar( 'widget-footer-right' ); ?>
 					<?php endif; ?>
-					<!--form action="" method="post">
-						<input type="text" name="input-name" placeholder="Name" required>
-						<input type="mail" name="input-mail" placeholder="Mail" required>
-						<textarea name="textarea-message" id="" placeholder="Message" required></textarea>
-						<button type="submit">Send Message</button>
-					</form-->
 				</div>
 			</div>
 

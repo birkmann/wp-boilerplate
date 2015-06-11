@@ -43,21 +43,21 @@
 </div>
 
 
-	<div class="wrapper">
+<div class="wrapper">
 
-		<?php if(have_posts()) : ?>
-			<?php while(have_posts()) : the_post(); ?>
+	<?php if(have_posts()) : ?>
+		<?php while(have_posts()) : the_post(); ?>
 
-				<?php 
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail();
-					}
-					the_content();
-				?>
+			<?php 
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail();
+				}
+				the_content();
+			?>
 
-			 <?php endwhile; ?>
-		<?php endif; ?>
+		 <?php endwhile; ?>
+	<?php endif; ?>
 
-	</div>
+</div>
 
 <?php get_footer(); ?>

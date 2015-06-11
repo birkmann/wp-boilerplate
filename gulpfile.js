@@ -60,6 +60,8 @@ gulp.task('scripts', function() {
 		.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('images', function() {});
+
 gulp.task('scripts-deploy', function() {
 	return gulp.src(['assets/scripts/src/_includes/**/*.js', 'assets/scripts/src/**/*.js'])
 		.pipe(concat('app.js'))

@@ -1,0 +1,24 @@
+.wrapper-404 {
+	background: url("../images/404-bg-small.png") no-repeat;
+	background-position: center center;
+	padding: 150px 0;
+	text-align: center;
+	@include breakpoint(tablet){
+		padding: 300px 0;
+		background: url("../images/404-bg.png") no-repeat;
+		background-position: center center;
+	}
+	h2 {
+		font-size: 2em;
+		line-height: 0.95em;
+		max-width: 600px;
+		color: #000;
+		margin: 10px auto 25px;
+		@include breakpoint(tablet){
+			font-size: 3em;
+		}
+	}
+	.button {
+		@extend .button;
+	}
+}
