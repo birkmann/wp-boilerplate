@@ -18,12 +18,12 @@
 					<?php if ( is_active_sidebar( 'widget-footer-right' ) ) : ?>
 						<?php dynamic_sidebar( 'widget-footer-right' ); ?>
 					<?php endif; ?>
-					<form action="inc/form-handle.php">
-						<input type="text" name="contact-name" placeholder="Name" required>
-						<input type="mail" name="contact-mail" placeholder="Mail" required>
-						<textarea name="contact-message" id="" placeholder="Message" required></textarea>
+					<!--form action="" method="post">
+						<input type="text" name="input-name" placeholder="Name" required>
+						<input type="mail" name="input-mail" placeholder="Mail" required>
+						<textarea name="textarea-message" id="" placeholder="Message" required></textarea>
 						<button type="submit">Send Message</button>
-					</form>
+					</form-->
 				</div>
 			</div>
 
@@ -38,8 +38,7 @@
 </div> <!-- .page-wrapper -->
 <?php wp_footer(); ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script>if (!window.jQuery) { document.write('<script src="<?php bloginfo('template_directory'); ?>/assets/scripts/jquery.js"><\/script>'); }
-</script>
+<script>if (!window.jQuery) { document.write('<script src="<?php bloginfo('template_directory'); ?>/assets/scripts/jquery.js"><\/script>'); }</script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/app.js"></script>
 </body>
 </html>
