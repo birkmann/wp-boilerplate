@@ -128,6 +128,9 @@
 
 	/* Contact Form Start */
 
+	// http://www.drweb.de/magazin/wordpress-intern-ein-einstieg-custom-post-types-50402/
+	// http://www.smashingmagazine.com/2015/04/22/extending-wordpress-custom-content-types/
+
 	function html_form_code() {
 		echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
 		echo '<input type="text" name="cf-name" pattern="[a-zA-Z0-9 ]+" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" placeholder="Name" required >';
