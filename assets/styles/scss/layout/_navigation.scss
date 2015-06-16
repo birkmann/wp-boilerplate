@@ -1,5 +1,4 @@
-nav.nav-main,
-.menu-wrapper {
+nav.nav-main {
 	position: relative;
 	z-index: 5;
 	display: none;
@@ -14,6 +13,7 @@ nav.nav-main,
 	}
 	@include breakpoint(laptop){
 		display: block !important;
+		float: left;
 	}
 	ul {
 		@include clearfix;

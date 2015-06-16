@@ -31,5 +31,22 @@ article.feature {
 			margin: 0;
 			color: #666;
 		}
+		.infos {
+			@include clearfix;
+			margin: 5px 0 0;
+			padding: 0;
+			font-size: 0.9em;
+			li {
+				list-style: none;
+				float: left;
+				margin: 5px 10px 5px 0;
+				.icon {
+					color: #666;
+				}
+				.number {
+					color: #888;
+				}
+			}
+		}
 	}
 }

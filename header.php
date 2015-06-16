@@ -25,15 +25,13 @@
 				Plate
 			</a>
 
-			<div class="menu-wrapper">
-				<?php 
-					wp_nav_menu( array( 
-						'theme_location' 	=> 'nav-main',
-						'echo'				=> true,
-						'items_wrap'      => '<nav class="nav-main"><ul id="%1$s" class="%2$s"> <span class="menu-items">%3$s</span></ul></nav>'
-					)); 
-				?>
-			</div>
+			<?php 
+				wp_nav_menu( array( 
+					'theme_location' 	=> 'nav-main',
+					'echo'				=> true,
+					'items_wrap'      => '<nav class="nav-main"><ul id="%1$s" class="%2$s"> <span class="menu-items">%3$s</span></ul></nav>'
+				)); 
+			?>
 
 			<span class="search-toggle open glyph-icon flaticon-magnifying-glass32"></span>
 			<span class="search-toggle close glyph-icon flaticon-close47"></span>
