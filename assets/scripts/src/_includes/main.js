@@ -26,6 +26,8 @@ $(document).ready(function(){
 
 	animate404();
 
+	$(".comment-form").removeAttr("novalidate");
+
 	$('.emotion .owl-carousel').owlCarousel({
 		autoPlay: 3000,
 		loop: true,

@@ -1,5 +1,7 @@
 <?php
 
+	/* contact form redirect */
+
 	define( 'TEMPLATE_PARENT_DIR', get_template_directory() );
 	define( 'TEMPLATE_INCLUDES_DIR', TEMPLATE_PARENT_DIR. '/inc' );
 
