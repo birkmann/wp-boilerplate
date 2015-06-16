@@ -2,50 +2,61 @@
 	.comments-title {
 		display: none;
 	}
-	ol.comment-list {
+	.comment-list {
 		margin: 0;
 		padding: 0;
-		li.comment {
-			margin: 25px 0;
-			article {
-				footer.comment-meta {
-					.comment-author {
-						@include clearfix;
-						line-height: 70px;
-						img {
-							border-radius: 100%;
-							float: left;
-							margin: 0 15px 0 0;
-						}
-						b {
-
-						}
-						.says {
-							display: none;
-						}
-					}
-					.comment-metadata {
-						font-size: 0.9em;
-						a {
-
-						}
-					}
+		li {
+			list-style: none;
+			margin: 50px 0;
+			header {
+				@include clearfix;
+				margin: 10px 0;
+				img {
+					float: left;
+					border-radius: 100%;
+					margin: 0 15px 0 0;
 				}
-				.comment-content {
-					border: 1px solid #eee;
+				h3.author {
+					float: left;
 					margin: 0;
-					padding: 15px;
-					p {
-						margin: 0;
-					}
+					line-height: 50px;
+					margin: 0 15px 0 0;
 				}
-				.reply {
-					@include clearfix;
-					a {
-						float: right;
-					}
+				.date {
+					line-height: 50px;
+				}
+				.says {
+					display: none;
+				}
+			}
+			.text {
+				padding: 15px;
+				border: 1px solid #eee;
+				p {
+					margin: 0;
 				}
 			}
 		}
+	}
+	.comment-respond {
+
+	}
+}
+
+.comment-form {
+	label {
+		font-weight: bold;
+		display: block;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	textarea {
+		font-size: inherit;
+		line-height: inherit;
+		width: 100%;
+		padding: 10px;
+		margin: 0 0 10px;
+		border: 1px solid #ddd;
 	}
 }

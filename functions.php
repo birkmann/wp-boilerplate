@@ -175,6 +175,9 @@
 
 	/* Contact Form End */
 
+	function prefix_comment_callback( $comment, $args, $depth ) {
+		include( locate_template('comment.php') );
+	}
 
 	/* Custom Post Type Start */
 
@@ -228,7 +231,5 @@
 	}
 	 
 	add_action( 'init', 'ah_custom_post_type', 0 );
-
-	
 
 ?>

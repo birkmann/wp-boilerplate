@@ -31,8 +31,11 @@
 							</li>
 						</ul>
 					</header>
+					
 					<?php the_content(); ?>
+
 					<?php comments_template(); ?>
+
 				</article>
 			<?php endwhile; ?>
 			
