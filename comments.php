@@ -25,6 +25,22 @@
 
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php
+		$comments_args = array(
+	        'comment_field' => '<textarea id="comment" name="comment" aria-required="true" placeholder="Comment"></textarea>',
+			'fields' => apply_filters( 'comment_form_default_fields', array(
+		    'author' =>
+		      '<input id="author" placeholder="Name" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+		      '" size="30"' . $aria_req . ' />' /* . ( $req ? '<span class="required">*</span>' : '' ) */,
+		    'email' =>
+		      '<input id="email" placeholder="Mail" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+		      '" size="30"' . $aria_req . ' />' /* . ( $req ? '<span class="required">*</span>' : '' ) */,
+		    'url' =>
+		      '<input id="url" placeholder="Website" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+		      '" size="30" />',
+		    )
+		  ),
+		);
+	comment_form($comments_args); ?>
 
 </div>
