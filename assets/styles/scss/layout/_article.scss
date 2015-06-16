@@ -1,7 +1,5 @@
-article.feature {
+article {
 	@include clearfix;
-	border: 1px solid #eee;
-	margin: 0 0 25px;
 	.block-side {
 		@include breakpoint(tablet){
 			width: 40%;
@@ -25,28 +23,33 @@ article.feature {
 		}
 		h3 {
 			line-height: 1.2em;
-			margin: 0 0 10px;
+			margin: 0 0 8px;
 		}
 		p {
 			margin: 0;
 			color: #666;
 		}
-		.infos {
-			@include clearfix;
-			margin: 5px 0 0;
-			padding: 0;
-			font-size: 0.9em;
-			li {
-				list-style: none;
-				float: left;
-				margin: 5px 10px 5px 0;
-				.icon {
-					color: #666;
-				}
-				.number {
-					color: #888;
-				}
+	}
+	.infos {
+		@include clearfix;
+		margin: 3px 0 0;
+		padding: 0;
+		font-size: 0.9em;
+		li {
+			list-style: none;
+			float: left;
+			margin: 5px 10px 5px 0;
+			.icon {
+				color: #666;
+			}
+			.number {
+				color: #888;
 			}
 		}
 	}
+}
+
+article.feature {
+	border: 1px solid #eee;
+	margin: 0 0 25px;
 }

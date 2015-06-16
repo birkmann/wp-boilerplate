@@ -1,0 +1,51 @@
+.comments-area {
+	.comments-title {
+		display: none;
+	}
+	ol.comment-list {
+		margin: 0;
+		padding: 0;
+		li.comment {
+			margin: 25px 0;
+			article {
+				footer.comment-meta {
+					.comment-author {
+						@include clearfix;
+						line-height: 70px;
+						img {
+							border-radius: 100%;
+							float: left;
+							margin: 0 15px 0 0;
+						}
+						b {
+
+						}
+						.says {
+							display: none;
+						}
+					}
+					.comment-metadata {
+						font-size: 0.9em;
+						a {
+
+						}
+					}
+				}
+				.comment-content {
+					border: 1px solid #eee;
+					margin: 0;
+					padding: 15px;
+					p {
+						margin: 0;
+					}
+				}
+				.reply {
+					@include clearfix;
+					a {
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
