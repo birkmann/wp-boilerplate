@@ -1,0 +1,23 @@
+.search-page {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	.form-search {
+		margin: 50px 0;
+		input[type="text"] {
+			width: 100%;
+			padding: 10px 12px;
+			font-size: inherit;
+			border: 1px solid #eee;
+			margin: 10px 0;
+		}
+	}
+	.search-results {
+		li {
+			font-size: 1.15em;
+			margin: 10px 0;
+			a {
+
+			}
+		}
+	}
+}

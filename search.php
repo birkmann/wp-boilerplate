@@ -18,9 +18,9 @@
 				echo $total_results;
 				
 				if ($total_results > 1) {
-					echo "search results for: ";
+					echo " search results for: ";
 				} else {
-					echo "search result for: ";
+					echo " search result for: ";
 				}
 
 				$search_query = get_search_query();
@@ -43,7 +43,7 @@
 			$the_query = new WP_Query( $args );
 
 			if ( $the_query->have_posts() ) {
-				echo "<ul>";
+				echo "<ol class=\"search-results\">";
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 		?>
@@ -53,7 +53,7 @@
 
 		<?php
 				}
-				echo "</ul>";
+				echo "</ol>";
 			} else {
 		?>
 			<h2>Nothing Found</h2>
