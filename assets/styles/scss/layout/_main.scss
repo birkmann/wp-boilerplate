@@ -22,7 +22,8 @@
 }
 
 .primary-font {
-	font-family: "Open Sans", sans-serif;
+	/* font-family: "Open Sans", sans-serif; */
+	font-family: "Lato", sans-serif;
 }
 
 .secondary-font {
@@ -34,12 +35,12 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	line-height: 1.6em;
-	font-weight: 400;
+	line-height: 1.7em;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0;
-	color: #333;
+	color: #666;
+	font-weight: 400;
 	font-size: 15px;
 	@include breakpoint(tablet) {
 		font-size: 15px;
