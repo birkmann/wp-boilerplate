@@ -22,13 +22,13 @@
 }
 
 .primary-font {
-	/* font-family: "Open Sans", sans-serif; */
-	font-family: "Lato", sans-serif;
+	font-family: sans-serif;
 }
 
 .secondary-font {
-	font-family: "Montserrat", sans-serif;
+	font-family: serif;
 }
+
 
 body {
 	@extend .primary-font;
@@ -39,7 +39,7 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0;
-	color: #666;
+	color: #333;
 	font-weight: 400;
 	font-size: 15px;
 	@include breakpoint(tablet) {
@@ -52,7 +52,7 @@ body {
 		font-size: 16px;
 	}
 	@include breakpoint(larger) {
-		font-size: 16px;
+		font-size: 17px;
 	}
 }
 
@@ -63,10 +63,10 @@ h3 {
 }
 
 a {
-	color: #4472B9;
+	color: #000;
 	text-decoration: none;
 	&:hover {
-		color: #000;
+		text-decoration: underline;
 	}
 }
 
@@ -93,7 +93,7 @@ a {
 }
 
 .wrapper {
-	max-width: 1140px;
+	max-width: 1280px;
 	margin: 0 auto;
 	padding: 0 15px;
 	position: relative;
@@ -132,7 +132,6 @@ header.header-main {
 		text-decoration: none;
 	}
 	.logo {
-		@extend .secondary-font;
 		font-size: 2em;
 		font-weight: bold;
 		letter-spacing: -2px;

@@ -25,7 +25,6 @@ nav.nav-main {
 				float: left;
 			}
 			a {
-				@extend .secondary-font;
 				display: block;
 				padding: 5px 15px;
 				color: #888;
@@ -63,7 +62,9 @@ nav.nav-main {
 						position: absolute;
 						background: #fff;
 						min-width: 150px;
-						border: 1px solid #eee;
+						border-right: 1px solid #eee;
+						border-bottom: 1px solid #eee;
+						border-left: 1px solid #eee;
 						li {
 							float: none;
 							a {

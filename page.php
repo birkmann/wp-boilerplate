@@ -78,25 +78,33 @@
 							</span>
 							<span class="block-text">
 								<a href="<?php the_permalink(); ?>">
-									<h3><?php the_title(); ?></h3>
+									<h3>
+										<?php 
+											if (strlen($post->post_title) > 80) {
+												echo substr(the_title($before = '', $after = '', FALSE), 0, 80) . '...';
+											} else {
+												the_title();
+											}
+										?>
+									</h3>
+									<ul class="infos">
+										<li>
+											<span class="icon flaticon flaticon-calentar"></span>
+											<time class="number" datetime="<?php the_time('Y-m-d'); ?>" pubdate>
+												<?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
+											</time>
+										</li>
+										<li>
+											<span class="icon flaticon flaticon-speechbubble65"></span>
+											<span class="number">
+												<?php comments_number( '0', '1', '%' ); ?>
+											</span>
+										</li>
+									</ul>
 								</a>
 								<a href="<?php the_permalink(); ?>">
 									<?php the_excerpt(); ?>
 								</a>
-								<ul class="infos">
-									<li>
-										<span class="icon flaticon flaticon-calentar"></span>
-										<time class="number" datetime="<?php the_time('Y-m-d'); ?>" pubdate>
-											<?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
-										</time>
-									</li>
-									<li>
-										<span class="icon flaticon flaticon-speechbubble65"></span>
-										<span class="number">
-											<?php comments_number( '0', '1', '%' ); ?>
-										</span>
-									</li>
-								</ul>
 							</span>
 						</article>
 						  
