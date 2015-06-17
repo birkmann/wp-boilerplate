@@ -1,0 +1,19 @@
+div.wpcf7-validation-errors {
+	margin: 0 !important;
+	padding: 10px;
+	color: #c4690e;
+	background: #fffdf3;
+	text-align: center;
+	border: 1px solid #fad7b5;
+	font-weight: 400;
+	font-size: 0.923em;
+	line-height: 1.4em;
+}
+
+.wpcf7-not-valid {
+	border: 1px solid red !important;
+}
+
+.wpcf7-not-valid-tip {
+	display: none !important;
+}

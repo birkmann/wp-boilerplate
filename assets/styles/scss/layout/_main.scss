@@ -29,7 +29,6 @@
 	font-family: serif;
 }
 
-
 body {
 	@extend .primary-font;
 	-webkit-text-size-adjust: 100%;
@@ -280,7 +279,8 @@ footer.footer-main {
 			textarea {
 				min-height: 150px;
 			}
-			button {
+			button,
+			input[type="submit"] {
 				@extend .button;
 			}
 		}

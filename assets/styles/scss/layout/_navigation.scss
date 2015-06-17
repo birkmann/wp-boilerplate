@@ -9,6 +9,7 @@ nav.nav-main {
 		background: #fff;
 		width: 100%;
 		border-bottom: 1px solid #eee;
+		border-top: 1px solid #eee;
 		padding: 10px 0;
 	}
 	@include breakpoint(laptop){

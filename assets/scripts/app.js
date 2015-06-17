@@ -56,7 +56,12 @@ $(document).ready(function(){
 	$(".menu-toggle").click(function(){
 		$(".menu-wrapper").toggle();
 		$(".nav-main").toggle();
-		$(".search-wrapper").hide();
+		if ($('.search-wrapper').is(":visible")) {
+			$(".search-wrapper").hide();
+			$(".search-toggle.close").hide();
+			$(".search-toggle.open").show();
+		}
+
 	});
 
 	$('.emotion img').vAlign();

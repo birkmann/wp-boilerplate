@@ -1,7 +1,5 @@
 <?php
 
-	/* contact form redirect */
-
 	define( 'TEMPLATE_PARENT_DIR', get_template_directory() );
 	define( 'TEMPLATE_INCLUDES_DIR', TEMPLATE_PARENT_DIR. '/inc' );
 
@@ -127,55 +125,6 @@
 	}
 	add_filter('excerpt_more', 'new_excerpt_more');
 
-
-	/* Contact Form Start */
-
-	// http://www.drweb.de/magazin/wordpress-intern-ein-einstieg-custom-post-types-50402/
-	// http://www.smashingmagazine.com/2015/04/22/extending-wordpress-custom-content-types/
-
-	function html_form_code() {
-		echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
-		echo '<input type="text" name="cf-name" pattern="[a-zA-Z0-9 ]+" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" placeholder="Name" required >';
-		echo '<input type="email" name="cf-email" value="' . ( isset( $_POST["cf-email"] ) ? esc_attr( $_POST["cf-email"] ) : '' ) . '" size="40" placeholder="Mail" required>';
-		echo '<input type="text" name="cf-subject" pattern="[a-zA-Z ]+" value="' . ( isset( $_POST["cf-subject"] ) ? esc_attr( $_POST["cf-subject"] ) : '' ) . '" size="40"  placeholder="Subject" required>';
-		echo '<textarea name="cf-message" placeholder="Message" required>' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
-		echo '<button name="cf-submitted" type="submit">Send Message</button>';
-		echo '</form>';
-	}
-
-	function deliver_mail() {
-		if ( isset( $_POST['cf-submitted'] ) ) {
-			$name    = sanitize_text_field( $_POST["cf-name"] );
-			$email   = sanitize_email( $_POST["cf-email"] );
-			$subject = sanitize_text_field( $_POST["cf-subject"] );
-			$message = esc_textarea( $_POST["cf-message"] );
-
-			$to = get_option( 'admin_email' );
-
-			$headers = "From: $name <$email>" . "\r\n";
-
-			if ( wp_mail( $to, $subject, $message, $headers ) ) {
-				echo "sucess";
-				// wp_redirect( 'http://www.example.com', 301 );
-				// exit;
-			} else {
-				echo "error";
-				// wp_redirect( 'http://www.example.com', 301 );
-				// exit;
-			}
-		}
-	}
-
-	function cf_shortcode() {
-		ob_start();
-		deliver_mail();
-		html_form_code();
-		return ob_get_clean();
-	}
-
-	add_shortcode( 'contact_form', 'cf_shortcode' );
-
-	/* Contact Form End */
 
 	function prefix_comment_callback( $comment, $args, $depth ) {
 		include( locate_template('comment.php') );
