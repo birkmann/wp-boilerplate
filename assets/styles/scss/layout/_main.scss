@@ -79,6 +79,7 @@ a {
 	cursor: pointer;
 	text-transform: uppercase;
 	&:hover {
+		text-decoration: none;
 		background: none;
 		color: #000;
 	}
