@@ -12,14 +12,27 @@
 
 		<main class="content">
 
+
+
 			<h2>Blog</h2>
 
 			<?php
 
-				   $args = array(
-				   		'cat' => all,
-				   		'showposts' => 5
-				   	);
+				/*
+				$args = array(
+					'cat' => all,
+					'showposts' => 3
+				);
+				*/
+
+				$args = array(
+					'order' => 'asc',
+					'order_by' => 'title',
+					'posts_per_page'=> 3, 
+					'category_name'=> '',
+					'paged' => get_query_var( 'paged' )
+				);
+
 				   $category_posts = new WP_Query($args);
 
 				   if($category_posts->have_posts()) : 
@@ -64,18 +77,18 @@
 							</a>
 						</span>
 					</article>
-					  
-				<?php
-					  endwhile;
-				   else: 
-				?>
+
+				<?php endwhile; ?>
+
+					<?php template_page_navi(); ?>
+
+				<?php else : ?>
+
 					  There are no posts.
 
 			<?php
 			   endif;
 			?>
-
-			---PAGINATION---
 
 			<?php if(have_posts()) : ?>
 				<?php while(have_posts()) : the_post(); ?>
