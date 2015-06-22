@@ -12,7 +12,7 @@
 
 		<main class="content">
 
-			<h1>Blog</h1>
+			<h2>Blog</h2>
 
 			<?php
 
